@@ -58,6 +58,8 @@ def correct_data(data):
     df["number_in_season"] = df["number_in_season"].astype(int)
     df["us_viewers"] = df["us_viewers"].str.extract(r"([\d.]+)").astype(float)
 
+    df = df.iloc[:62]
+
     return df
 
 
